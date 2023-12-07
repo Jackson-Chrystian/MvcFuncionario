@@ -1,0 +1,42 @@
+﻿@model Funcionario.Models.tblFuncionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblFuncionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            Cargo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo)
+        </dd>
+
+        <dt>
+            Setor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tlbSetor.nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_funcionario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

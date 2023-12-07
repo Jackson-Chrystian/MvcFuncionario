@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Funcionario.Models.tlbSetor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Setor
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_setor }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_setor }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_setor })
+        </td>
+    </tr>
+}
+
+</table>
